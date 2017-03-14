@@ -116,7 +116,7 @@ int *dynaMem(const int SIZE){
     
     for (int i = 0; i < SIZE; i++) *(ptr + i) = rand() % 9;
     
-    cout << "Startic address in function: " << ptr << endl;
+    cout << "Static address in function: " << ptr << endl;
     
     return ptr;
 }
