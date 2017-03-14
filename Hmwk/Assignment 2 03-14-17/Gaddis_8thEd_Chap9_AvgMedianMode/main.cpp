@@ -79,11 +79,11 @@ void median(int arr[], const int SIZE){
 }
 
 void mode(int *arr, const int SIZE){
-    int freq[SIZE] = {};
+    int *freq = new int [SIZE];
     int large = 1;
     
     //Set all elements equal to 1 (each number already has an occurrence of 1)
-    for (int i = 0; i < SIZE; i++) freq[i] = 1;
+    for (int i = 0; i < SIZE; i++) *(freq + i) = 1;
     
     //Count how many times the same number occurred more than once
     for (int i = 0; i < SIZE - 1; i++){
@@ -92,7 +92,7 @@ void mode(int *arr, const int SIZE){
         }
         
         //Keep track and save new highest occurrence of a number
-        if (freq[i] > large) large = freq[i];
+        if (freq[i] > large) large = *(freq + i);
     }
     
     //Display mode if any
@@ -103,4 +103,6 @@ void mode(int *arr, const int SIZE){
         }
         cout << "\nFrequency: " << large << endl;
     } else cout << "There was no mode.\n";
+    
+    delete [] freq;
 }
