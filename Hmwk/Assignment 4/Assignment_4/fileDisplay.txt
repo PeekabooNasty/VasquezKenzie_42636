@@ -1,0 +1,11 @@
+abc
+def
+ghi
+jkl
+mno
+pqr
+sty
+vwx
+yz
+0123456789
+YOU SHOULDN'T BE READING THIS LINE FOR PROBLEM 12.1
